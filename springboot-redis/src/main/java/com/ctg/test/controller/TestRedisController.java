@@ -33,8 +33,10 @@ import java.util.Map;
 @Controller
 public class TestRedisController {
     private final Logger log = LoggerFactory.getLogger(TestRedisController.class);
+    
     @Autowired
     RedisUtil redisUtil;
+    
     @RequestMapping(value = "/setSession", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> firstResp(HttpSession session,HttpServletRequest request, @RequestParam("key") String key
